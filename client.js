@@ -73,6 +73,7 @@ function ValidateInformation() {
   return(true);
 }
 
+//Test commit
 /*document.getElementById('login_button').innerHTML =  function() {
   alert("I am an alert box!");
 }*/
