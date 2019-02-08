@@ -1,0 +1,77 @@
+!<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Ask lab assistant about this -->
+		<script type="text/javascript" src="client.js"></script>
+		<script type="text/javascript" src = "serverstub.js"></script>
+		<!--<script type="text/view" id = "welcomeview"> THIS IS CURRENTLY NOT REALLY WORKING-->
+		<!--<script type="text/viewt" id = "profileView">-->
+
+		<title>my site</title>
+		<link  rel="stylesheet" type="text/css" href="client.css"/>
+	</head>
+	<body>
+		<div id="container">
+			<div id="left">
+			</div>
+			<div id="right_login">
+				<form name="login" method= "POST" id="signInForm">
+					<label>Email:</label>
+					<input type="text" name="email_login" id="email" placeholder="Your email.."  />
+					<label>Password:</label>
+					<input type="password" name="password_login" id="login_password" placeholder="********"  />
+					<input class="submitbutton" value="Login" onclick="login()">
+				</form>
+			</div>
+
+			<div id="right_signup">
+				<h3 align="center">Sign up here</h3>
+				<form class="signup">
+					<label>First Name:</label>
+					<input type="text" id="first_name" placeholder="Your name.." required>
+					<label>Family Name: </label>
+					<input type="text" id="family_name" placeholder="Enter your Family name.." required>
+					<label>Gender: </label>
+					<select name="gender" id="gender">
+							<option value="male">Male</option>
+							<option value="female">Female</option>
+					</select>
+					<label>City: </label>
+					<input type="text" id="city_name" placeholder="Your City.. " required>
+					<label>Country: </label>
+					<input type="text" id="country_name" placeholder="Your Country.." required>
+					<label>Email: </label>
+					<input type="text" id="email_address" placeholder="Your Email.." oninput="CheckEmail()" required>
+					<label>Password:</label>
+					<input type="password" id="new_password" placeholder="New password.." oninput="PasswordLengthChecker()" equired>
+					<label>Repeat password:</label>
+					<input type="password" id="repeat_password" placeholder="Repeat password.." oninput="PasswordMatcher()" required>
+					<input class="submitbutton" id="registrationSubmitButton" type="submit" value="signup" onclick="ValidateInformation()">
+					<p id="error_area"></p>
+				</form>
+			</div>
+		</div>
+
+		<!--<div id = "profileView">
+			<div id = "main_menu">
+				<ul>
+					<a href="https://www.w3schools.com">Home</a>
+					<a href="https://www.w3schools.com">Browse</a>
+					<a href="https://www.w3schools.com">Account</a>
+					<input class="submitbutton" type="submit" value="Logout">
+				</ul>
+			</div>
+			<div id="post_container">
+				<textarea rows="4" cols="50"> </textarea><br>
+				<input id="post_butten" type="submit" value="Post">
+			</div>
+			<div id = "profile_info">
+				<div id = post_item>
+					<label>Login user</label><br>
+				</div>
+			</div>
+		</div>
+	  <div id="view">
+		</div>-->
+	</body>
+</html>

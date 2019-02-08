@@ -1,0 +1,78 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: skyblue;
+}
+
+#container{
+	width: 600px;
+	height: 500px;
+	margin: auto;
+}
+
+#left{
+	width: 340px;
+	height: 400px;
+	background-image: url(wimage.png);
+	float: left;
+	border: 2px solid;
+	position: relative;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#right_login{
+	width: 250px;
+	height: 100px;
+	float: right;
+	margin: auto;
+	border: 2px solid;
+	margin-top: 50px;
+	margin-bottom: 5px;
+}
+
+#right_signup{
+	width: 250px;
+	height: 292px;
+	float: right;
+	border: 2px solid;
+}
+
+#login_button{
+	padding: 3px;
+	width: 60px;
+	height: 30px;
+	float: right;
+}
+
+form.login{
+	margin-top: 20px;
+}
+
+label {
+  width: 128px;
+  font-weight: bold;
+  float: left;
+}
+
+input {
+  width: 118px;
+  font-weight: bold;
+  float: right;
+}
+
+#main_menu{
+	background-color: black;
+	margin: auto;
+}
+
+#post_container{
+	width: 600px;
+	height: 500px;
+	margin: auto;
+}
+#post_butten{
+	margin-top: 10px;
+	padding: 2px;
+	float: left;
+}
