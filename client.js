@@ -41,23 +41,6 @@ function PasswordMatcher() {
 
 //sign up validator, for when the button is pressed
 function ValidateInformation() {
-  var email = document.getElementById("email_address").value;
-  if (email != null) {
-    if ((/^(\S+@\S+)$/.test(email)) != true) { //Simple reg exp comparison
-      alert("You have entered an invalid email address!");
-      return (false);
-    }
-  }
-  var password = document.getElementById("new_password").value;
-  var repeat_password = document.getElementById("repeat_password").value;
-  if (password.length < 8) {
-    alert("Your password must be at least 8 characters long.");
-    return (false);
-  }
-  if (password != repeat_password) {
-    alert("Your passwords do not match.");
-    return (false);
-  }
   var selectPane = document.getElementById("gender"); //Helper function, grabs the multi option select pane
   var allInformation = {"email":document.getElementById("email_address").value,
       "password":document.getElementById("new_password").value,
@@ -66,8 +49,23 @@ function ValidateInformation() {
       "gender":selectPane.options[selectPane.selectedIndex].value,
       "city":document.getElementById("city_name").value,
       "country":document.getElementById("country_name").value
-      }
-  var signUpValue = serverstub.signUp(allInformation); //Supposed to be of compound type, inputObject.email etc. WHAT IS THE FREAKING SYNTAX
+  }
+  if (allInformation.email != null) {
+    if ((/^(\S+@\S+)$/.test(allInformation.email)) != true) { //Simple reg exp comparison
+      alert("You have entered an invalid email address!");
+      return (false);
+    }
+  }
+  var repeat_password = document.getElementById("repeat_password").value;
+  if (allInformation.password.length < 8) {
+    alert("Your password must be at least 8 characters long.");
+    return (false);
+  }
+  if (allInformation.password != repeat_password) {
+    alert("Your passwords do not match.");
+    return (false);
+  }
+  var signUpValue = serverstub.signUp(allInformation);
   document.getElementById("error_area").innerHTML = signUpValue.message;
   alert(signUpValue.message);
   return(true);
